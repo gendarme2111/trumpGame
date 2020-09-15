@@ -1,0 +1,17 @@
+img{
+    height:180px;
+    width:120px;
+}
+.container{
+    display: flex;
+    justify-content: center;
+}
+.button-wrapper{
+    text-align: center;
+}
+.dealCard-wrapper{
+    text-align: center;
+}
+p{
+margin-right:150px;
+}
