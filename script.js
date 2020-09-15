@@ -14,31 +14,27 @@ function arrShuffle(array){
 
 function startGame(){
     arrShuffle(array);
-    for(i=0;i<12;i++){
-        if(i<=6){
-            continue;
-        }else{
+    for(i=7;i<12;i++){
         var img = document.images[i];
         img.src = array[i];
-        }
     }
 }
 var winCount = 0;
 var looseCount=0;
 function deal(i){
 	document.images[5].src=array[i]
-    document.images[i].src="";
+    	document.images[i].src="";
  	document.images[6].src=array[i-7];
-    document.images[i-7].src="";
-    var arrays= array[i].slice(0,-4);
-    var arrays2 = array[i-7].slice(0,-4);
-    if(parseInt(arrays.slice(1))>parseInt(arrays2.slice(1))){
-    winCount+=1;
-    }else{
-    looseCount+=1;
-}
-var countup = function(){
-    alert(winCount+"勝"+looseCount+"敗");
-  } 
-  setTimeout(countup, 500);
+    	document.images[i-7].src="";
+    	var arrays= array[i].slice(0,-4);
+    	var arrays2 = array[i-7].slice(0,-4);
+    	if(parseInt(arrays.slice(1))>parseInt(arrays2.slice(1))){
+    		winCount+=1;
+    	}else{
+    		looseCount+=1;
+	}
+	var countup = function(){
+    	alert(winCount+"勝"+looseCount+"敗");
+  	} 
+  	setTimeout(countup, 500);
 }
